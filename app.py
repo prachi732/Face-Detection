@@ -2,9 +2,9 @@ import streamlit as st
 import cv2
 import numpy as np
 from PIL import Image
-from time import sleep
 
-print(cv2.__version__)
+
+
 
 @st.cache
 def load_image(img):
