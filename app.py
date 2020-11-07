@@ -11,9 +11,9 @@ def load_image(img):
 	return im
 
 
-face_cascade = cv2.CascadeClassifier('frecog/haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('frecog/haarcascade_eye.xml')
-smile_cascade = cv2.CascadeClassifier('frecog/haarcascade_smile.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+smile_cascade = cv2.CascadeClassifier('haarcascade_smile.xml')
 
 def detect_faces(our_image):
 	new_img = np.array(our_image.convert('RGB'))
