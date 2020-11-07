@@ -127,7 +127,7 @@ def main():
 
 	elif choice == 'About':
 		st.subheader("About Face Detection App")
-		st.markdown("Built with Streamlit')
+		st.markdown("Built with Streamlit")
 		
 
 
