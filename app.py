@@ -1,3 +1,4 @@
+# Core Pkgs
 import streamlit as st 
 import cv2
 from PIL import Image,ImageEnhance
@@ -21,9 +22,8 @@ def detect_faces(our_image):
 	faces = face_cascade.detectMultiScale(gray, 1.1, 4)
 	# Draw rectangle around the faces
 	for (x, y, w, h) in faces:
-		 cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
-		
-				
+		cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
+				 
 	return img,faces 
 
 
@@ -114,6 +114,7 @@ def main():
 
 				st.success("Found {} faces".format(len(result_faces)))
 			
+
 			elif feature_choice == 'Cartonize':
 				result_img = cartonize_image(our_image)
 				st.image(result_img)
@@ -125,7 +126,8 @@ def main():
 
 
 
-	
+	elif choice == 'About':
+		st.subheader("About Face Detection App")
 		
 
 
